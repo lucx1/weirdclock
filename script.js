@@ -70,7 +70,7 @@ function mainfunction() {
 	if ((d.getMinutes() >= 15 && d.getMinutes() <= 19) || (d.getMinutes() >= 45 && d.getMinutes() <= 49)) {
 		lightup(viertel);
 	}
-	if ((d.getMinutes() >= 25 && d.getMinutes() <= 29) || (d.getMinutes() >= 50 && d.getMinutes() <= 59)) {
+	if ((d.getMinutes() >= 25 && d.getMinutes() <= 29) || (d.getMinutes() >= 45 && d.getMinutes() <= 59)) {
 		lightup(vor);
 	}
 	if ((d.getMinutes() >= 5 && d.getMinutes() <= 24) && (d.getMinutes() >= 35 && d.getMinutes() <= 44)) {
