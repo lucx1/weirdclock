@@ -23,11 +23,6 @@ var memorisefiveminutes = [];
 window.setInterval(mainfunction, 1);
 function mainfunction() {
 	var d = new Date();
-	if (d.getHours() == 0) {
-		var currentHour = 12;
-	} else if (d.getHours() >= 13) {
-		var currentHour = d.getHours() - 12;
-	}
 	turnoff(esist);
 	turnoff(fuenfmin);
 	turnoff(zehnmin);
@@ -73,11 +68,17 @@ function mainfunction() {
 	if ((d.getMinutes() >= 25 && d.getMinutes() <= 29) || (d.getMinutes() >= 45 && d.getMinutes() <= 59)) {
 		lightup(vor);
 	}
-	if ((d.getMinutes() >= 5 && d.getMinutes() <= 24) && (d.getMinutes() >= 35 && d.getMinutes() <= 44)) {
+	if ((d.getMinutes() >= 5 && d.getMinutes() <= 24) || (d.getMinutes() >= 35 && d.getMinutes() <= 44)) {
 		lightup(nach);
 	}
+	var currentHour = d.getHours();
 	if (d.getMinutes() >= 25 && d.getMinutes() <= 59) {
 		currentHour = currentHour + 1;
+	}
+	if (currentHour == 0) {
+		var currentHour = 12;
+	} else if (d.getHours() >= 13) {
+		var currentHour = d.getHours() - 12;
 	}
 	if (currentHour == 1) {
 		lightup(eins);
