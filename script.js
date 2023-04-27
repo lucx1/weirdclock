@@ -82,6 +82,9 @@ function mainfunction() {
 	}
 	if (currentHour == 1) {
 		lightup(eins);
+		if (d.getMinutes() >= 0 && d.getMinutes() <= 4) {
+			document.getElementById("35").style.color = "#6c1175";
+		}
 	}
 	if (currentHour == 2) {
 		lightup(zwei);
