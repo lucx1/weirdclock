@@ -73,7 +73,7 @@ function mainfunction() {
 	if ((d.getMinutes() >= 25 && d.getMinutes() <= 29) || (d.getMinutes() >= 35 && d.getMinutes() <= 59)) {
 		lightup(vor);
 	}
-	if ((d.getMinutes() >= 5 && d.getMinutes() <= 14) || (d.getMinutes() >= 20 && d.getMinutes() <= 24)) {
+	if ((d.getMinutes() >= 5 && d.getMinutes() <= 24)) {
 		lightup(nach);
 	}
 	if (d.getMinutes() >= 25 && d.getMinutes() <= 59) {
