@@ -28,113 +28,92 @@ function mainfunction() {
 	} else if (d.getHours() >= 13) {
 		var currentHour = d.getHours() - 12;
 	}
+	turnoff(esist);
+	turnoff(fuenfmin);
+	turnoff(zehnmin);
+	turnoff(zwanzigmin);
+	turnoff(viertel);
+	turnoff(vor);
+	turnoff(nach);
+	turnoff(halb);
+	turnoff(eins);
+	turnoff(zwei);
+	turnoff(drei);
+	turnoff(vier);
+	turnoff(fuenf);
+	turnoff(sechs);
+	turnoff(sieben);
+	turnoff(acht);
+	turnoff(neun);
+	turnoff(zehn);
+	turnoff(elf);
+	turnoff(zwoelf);
+	turnoff(uhr);
 	if ((d.getMinutes() >= 0 && d.getMinutes() <= 4) || (d.getMinutes() >= 30 && d.getMinutes() <= 34)) {
 		lightup(esist);
-	} else {
-		turnoff(esist);
 	}
 	if (d.getMinutes() >= 0 && d.getMinutes() <= 4) {
 		lightup(uhr);
-	} else {
-		turnoff(uhr);
 	}
 	if (d.getMinutes() >= 25 && d.getMinutes() <= 44) {
 		lightup(halb);
-	} else {
-		turnoff(halb);
 	}
 	if ((d.getMinutes() >= 5 && d.getMinutes() <= 9) || (d.getMinutes() >= 25 && d.getMinutes() <= 29) || (d.getMinutes() >= 35 && d.getMinutes() <= 39) || (d.getMinutes() >= 55 && d.getMinutes() <= 59)) {
 		lightup(fuenfmin);
-	} else {
-		turnoff(fuenfmin);
 	}
 	if ((d.getMinutes() >= 10 && d.getMinutes() <= 14) || (d.getMinutes() >= 40 && d.getMinutes() <= 44) || (d.getMinutes() >= 50 && d.getMinutes() <= 54)) {
 		lightup(zehnmin);
-	} else {
-		turnoff(zehnmin);
 	}
 	if (d.getMinutes() >= 20 && d.getMinutes() <= 24) {
 		lightup(zwanzigmin);
-	} else {
-		turnoff(zwanzigmin);
 	}
 	if ((d.getMinutes() >= 15 && d.getMinutes() <= 19) || (d.getMinutes() >= 45 && d.getMinutes() <= 49)) {
 		lightup(viertel);
-	} else {
-		turnoff(viertel);
 	}
 	if ((d.getMinutes() >= 25 && d.getMinutes() <= 29) || (d.getMinutes() >= 35 && d.getMinutes() <= 59)) {
 		lightup(vor);
-	} else {
-		turnoff(vor);
 	}
 	if ((d.getMinutes() >= 5 && d.getMinutes() <= 14) || (d.getMinutes() >= 20 && d.getMinutes() <= 24)) {
 		lightup(nach);
-	} else {
-		turnoff(nach);
 	}
 	if (d.getMinutes() >= 25 && d.getMinutes() <= 59) {
 		currentHour = currentHour + 1;
 	}
 	if (currentHour == 1) {
 		lightup(eins);
-	} else {
-		turnoff(eins);
 	}
 	if (currentHour == 2) {
 		lightup(zwei);
-	} else {
-		turnoff(zwei);
 	}
 	if (currentHour == 3) {
 		lightup(drei);
-	} else {
-		turnoff(drei);
 	}
 	if (currentHour == 4) {
 		lightup(vier);
-	} else {
-		turnoff(vier);
 	}
 	if (currentHour == 5) {
 		lightup(fuenf);
-	} else {
-		turnoff(fuenf);
 	}
 	if (currentHour == 6) {
 		lightup(sechs);
-	} else {
-		turnoff(sechs);
 	}
 	if (currentHour == 7) {
 		lightup(sieben);
-	} else {
-		turnoff(sieben);
 	}
 	if (currentHour == 8) {
 		lightup(acht);
-	} else {
-		turnoff(acht);
 	}
 	if (currentHour == 9) {
 		lightup(neun);
-	} else {
-		turnoff(neun);
 	}
 	if (currentHour == 10) {
 		lightup(zehn);
-	} else {
-		turnoff(zehn);
 	}
 	if (currentHour == 11) {
 		lightup(elf);
-	} else {
-		turnoff(elf);
 	}
 	if (currentHour == 12) {
 		lightup(zwoelf);
-	} else {
-		turnoff(zwoelf);
 	}
 	if (d.getMinutes() % 5 == 0) {
 		document.getElementById("0").style.color = "#6c1175";
